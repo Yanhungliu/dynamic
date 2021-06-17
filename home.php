@@ -65,13 +65,11 @@
               $result = mysqli_query($link, $sql);
                
               while($row = mysqli_fetch_row($result))
-              {
+                {
                       
                        echo "$row[0] , 您好<br> <br/>"
-                       ;
-              
-            }
-                
+                       ;              
+                }               
             }
             else
             {
@@ -83,19 +81,16 @@
             <select onChange="location = this.options[this.selectedIndex].value;">
             <option value="#">請選擇</option>
             <option value="member.php">個人資料</option>
-           <option value="">歷史作答紀錄</option>
+            <option value="">歷史作答紀錄</option>
             
             
-            </select>
-
-
-
-            <?php
-            echo '<br><a href="logout.php">登出</a>';
+            </select>  
+            <br>
+            <br>       
+             <a href="logout.php"><button class="btn btn-danger">登出</button></a>         
             
-            ?>
             </div>
-        <h1 style="padding-top:200px"><b>請選擇難易度....</b></h1>
+        <h1 style="padding-top:50px"><b>請選擇難易度....</b></h1>
         <div style="padding-top:100px">
             <div class="container">
                 <div class="row">
