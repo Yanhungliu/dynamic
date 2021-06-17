@@ -1,0 +1,546 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+         var A = new Array(25);
+            A[0] = "choice1";
+            A[1] = "choice2";
+            A[2] = "choice3";
+            A[3] = "choice4";
+            A[4] = "choice5";
+            A[5] = "choice6";
+            A[6] = "choice7";
+            A[7] = "choice8";
+            A[8] = "choice9";
+            A[9] = "choice10";
+            A[10] = "choice11";
+            A[11] = "choice12";
+            A[12] = "choice13";
+            A[13] = "choice14";
+            A[14] = "choice15";
+            A[15] = "choice16";
+            A[16] = "choice17";
+            A[17] = "choice18";
+            A[18] = "choice19";
+            A[19] = "choice20";
+            A[20] = "choice21";
+            A[21] = "choice22";
+            A[22] = "choice23";
+            A[23] = "choice24";
+            A[24] = "choice25";
+            var m = new Array(25);
+            m[0] = "msg1";
+            m[1] = "msg2";
+            m[2] = "msg3";
+            m[3] = "msg4";
+            m[4] = "msg5";
+            m[5] = "msg6";
+            m[6] = "msg7";
+            m[7] = "msg8";
+            m[8] = "msg9";
+            m[9] = "msg10";
+            m[10] = "msg11";
+            m[11] = "msg12";
+            m[12] = "msg13";
+            m[13] = "msg14";
+            m[14] = "msg15";
+            m[15] = "msg16";
+            m[16] = "msg17";
+            m[17] = "msg18";
+            m[18] = "msg19";
+            m[19] = "msg20";
+            m[20] = "msg21";
+            m[21] = "msg22";
+            m[22] = "msg23";
+            m[23] = "msg24";
+            m[24] = "msg25";
+            var c = new Array(25);
+            c[0]="c1";
+            c[1]="c2";
+            c[2]="c3";
+            c[3]="c4";
+            c[4]="c5";
+            c[5]="c6";
+            c[6]="c7";
+            c[7]="c8";
+            c[8]="c9";
+            c[9]="c10";
+            c[10]="c11";
+            c[11]="c12";
+            c[12]="c13";
+            c[13]="c14";
+            c[14]="c15";
+            c[15]="c16";
+            c[16]="c17";
+            c[17]="c18";
+            c[18]="c19";
+            c[19]="c20";
+            c[20]="c21";
+            c[21]="c22";
+            c[22]="c23";
+            c[23]="c24";
+            c[24]="c25";
+            var index=0;
+            var correct=0;
+            function checkAns(){
+                var msg = document.getElementById(m[index]);
+                var che = document.getElementById(c[index]);
+                if(document.getElementById(A[index]).checked){
+                    msg.innerHTML="correct";
+                    correct++;
+                }
+                else{
+                    msg.innerHTML="false";
+                }
+                che.style.visibility="hidden";
+                if(che.style.visibility="hidden")
+                index++;
+            }
+            function score(){
+                alert("已完成測驗，您答對"+correct+"題");
+                var back = document.getElementById("back");
+                back.style.visibility="visible";
+            }
+    </script>
+    <style>
+        body{
+            font-size: 22px;                
+            background-color:#FEEFC7;
+        }
+        h3{
+            background-color:lightcoral;
+            border-radius:20px;
+            padding-left:10px;
+        }
+        hr{
+            border:1px solid;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-8">
+                <div id="all">
+                    <h2 style="padding-top:30px; color:red"><b>每一題僅限作答一次，且不可跳題作答。</b></h2>
+                    <br>
+        
+                    <h2><p>Q1. The customer's order ______ will be sent by e-mail within twenty-four hours.</p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id="choice1"> confirmation</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> confirms</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> confirmed</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> confirm</p></h3>
+                    <br>
+                    <div id="msg1"><br></div>
+                    <button id="c1" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q2. Some of the leather used in this handbag must ______ from Italy. </p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> will import</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> to import</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> have imported</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id="choice2"> be imported</p></h3>
+                    <br>
+                    <div id="msg2"><br></div>
+                    <button id="c2" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q3. Rockwell Bank's automated teller machines are ______ located in various sections of the city.</p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id="">  abruptly</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id="choice3"> conveniently</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id="">  fluently</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id="">  periodically</p></h3>
+                    <br>
+                    <div id="msg3"><br></div>
+                    <button id="c3" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q4. The notice indicated that a first-aid training course will be provided free of charge to ______ next month.</p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> resides</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id="">  residential</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id="choice4"> residents</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id="">  residence</p></h3>
+                    <br>
+                    <div id="msg4"><br></div>
+                    <button id="c4" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q5. A government ______ will visit the site to talk with protesters directly and seek a resolution.</p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id="choice5"> representative</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> representation </p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> represent</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> represented</p></h3>
+                    <br>
+                    <div id="msg5"><br></div>
+                    <button id="c5" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q6. The proposed holiday schedule is ______ to most workers because they feel it is fair. </p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> accepting</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id="choice6"> acceptable</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id="">  accept</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> acceptably</p></h3>
+                    <br>
+                    <div id="msg6"><br></div>
+                    <button id="c6" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q7. Heron Glassworks ______ student groups of all ages for weekday tours of its warehouse and production floor.</p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id="">  conveys</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> encloses</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id="">  preserves</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id="choice7"> welcomes</p></h3>
+                    <br>
+                    <div id="msg7"><br></div>
+                    <button id="c7" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q8.  The maintenance team's repair requests should be ______ in groups according to the urgency.</p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> organizes</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> organize</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id="choice8"> organized</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id="">  organizing</p></h3>
+                    <br>
+                    <div id="msg8"></div><br></div>
+                    <button id="c8" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q9.  Weekly ______ of the facility help to ensure that minor maintenance issues are discovered and resolved early.</p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> investigates</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id="choice9"> investigations</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> investigative</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> investigated</p></h3>
+                    <br>
+                    <div id="msg9"><br></div>
+                    <button id="c9" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q10.  As a ______ for making contracts with a lot of new clients, Mr. Skinner was given additional vacation days. </p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id="choice10"> reward</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> routine</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> solution</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> progress</p></h3>
+                    <br>
+                    <div id="msg10"><br></div>
+                    <button id="c10" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q11. In an attempt ______ sustainable energy, city officials have had solar panels affixed to some public buildings. </p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> generates</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> generated</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> generating</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id="choice11"> to generate</p></h3>
+                    <br>
+                    <div id="msg11"><br></div>
+                    <button id="c11" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q12. With the help of one of the IT technicians, the missing accounting files have been ______. </p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> recover</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> recovers</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> recovering </p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id="choice12"> recovered</p></h3>
+                    <br>
+                    <div id="msg12"><br></div>
+                    <button id="c12" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q13. The landlord raised the monthly rent for the first time in several years, and ______ so. </p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> reasonable </p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id="choice13"> reasonably</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> reason</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> reasons</p></h3>
+                    <br>
+                    <div id="msg13"><br></div>
+                    <button id="c13" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q14. Ms. Johnson ______ a feasible solution to the customer's network problem. </p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id="choice14"> came up with</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> dropped by</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> looked in on </p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> ran out of</p></h3>
+                    <br>
+                    <div id="msg14"><br></div>
+                    <button id="c14" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q15. The next work of art for sale ______ one of finest paintings ever exhibited at the Cole Morton Meseum.</p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> has considered</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id="choice15"> is considered</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> is considering</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> considered</p></h3>
+                    <br>
+                    <div id="msg15"><br></div>
+                    <button id="c15" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q16. No passengers are allowed on board ______ the aircraft's door has been closed.</p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> that</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> despite</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id="choice16"> once</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> rather</p></h3>
+                    <br>
+                    <div id="msg16"><br></div>
+                    <button id="c16" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q17. Our spokesperson will explain an ______ opportunity for property investors.</p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> excitedlly</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> excitement</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id="choice17"> exciting</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> excited</p></h3>
+                    <br>
+                    <div id="msg17"><br></div>
+                    <button id="c17" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q18. The slow ______ of the fire department resulted in severe damage to the building.</p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> duration</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id="choice18"> response</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> treatment</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> maintenance</p></h3>
+                    <br>
+                    <div id="msg18"><br></div>
+                    <button id="c18" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q19. The test will ______ prove whether or not the patient has the disease.</p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> like</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> liking</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> likable</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id="choice19"> likely</p></h3>
+                    <br>
+                    <div id="msg19"><br></div>
+                    <button id="c19" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+        
+                    <h2><p>Q20. Emily introduced ______ before starting the interview for the management job.</p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> she</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id="choice20"> herself</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> hers</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> her</p></h3>
+                    <br>
+                    <div id="msg20"><br></div>
+                    <button id="c20" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+
+                    <h2><p>Q21. Everyone at Hammond Construction, Inc. was surprised to find out that the year's greatest cost saving measure was ______ by an intern.</p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> attracted</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> reserved</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> continue</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id="choice21"> suggested</p></h3>
+                    <br>
+                    <div id="msg21"><br></div>
+                    <button id="c21" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+
+                    <h2><p>Q22. The vacant rooms on the inn's second floor have ______ been cleaned. </p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> most</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> every</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id="choice22"> all</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> some</p></h3>
+                    <br>
+                    <div id="msg22"><br></div>
+                    <button id="c22" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+
+                    <h2><p>Q23. One of the interns ______ that the logo on the second page of the sales report was upside down. </p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id=""> looked after</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> accounted for </p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> came across</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id="choice23"> pointed out</p></h3>
+                    <br>
+                    <div id="msg23"><br></div>
+                    <button id="c23" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+
+                    <h2><p>Q24. Ms. Stevens ______ acknowledged that she was unable to complete the task in the specified time frame. </p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id="choice24"> regretfully</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> regret</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> regrets</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> regretful</p></h3>
+                    <br>
+                    <div id="msg24"><br></div>
+                    <button id="c24" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+
+                    <h2><p>Q25. The malfunction of the printer was ______ a component that had been inserted incorrectly during the assembly process. </p></h2>
+                    <hr>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="1" id="choice25"> due to </p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="2" id=""> as though </p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="3" id=""> whereas</p></h3>
+                    <br>
+                    <h3><p> <input type="radio" name="choice" value="4" id=""> instead of</p></h3>
+                    <br>
+                    <div id="msg25"><br></div>
+                    <button id="c25" class="btn btn-success" onclick="checkAns()">確認</button>
+                    <br>
+                    <br>
+
+                    <button class="btn btn-info"  onclick="score()">確認結果</button>
+                    <a href="home.html"><button class="btn btn-warning" id="back" style="visibility:hidden">返回大廳</button></a> 
+                </div>
+                <div class="col-sm-2">
+                </div>
+                </div>
+                </div>
+                    
+                <br>
+                <br>
+        
+    </body>
+</html>

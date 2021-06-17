@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            var Q = new Array(19);
+            Q[0]="緯度(l開頭)";
+            Q[1]="農業(a開頭)";
+            Q[2]="目的地(d開頭)";
+            Q[3]="紀念品(s開頭)";
+            Q[4]="畫廊(g開頭)";
+            Q[5]="翻譯(t開頭)";
+            Q[6]="氣氛(a開頭)";
+            Q[7]="猶豫(h開頭)";
+            Q[8]="合作(c開頭)";
+            Q[9]="王朝(d開頭)";
+            Q[10]="里程碑(m開頭)";
+            Q[11]="經度(l開頭)";
+            Q[12]="交通工具(t開頭)";
+            Q[13]="商品(c開頭)";
+            Q[14]="強調(e開頭)";
+            Q[15]="孤兒院(o開頭)";
+            Q[16]="互動(i開頭)";
+            Q[17]="香味(f開頭)";
+            Q[18]="提議(p開頭)";
+            var A = new Array(20);
+            A[0]="latitude";
+            A[1]="agriculture";
+            A[2]="destination";
+            A[3]="souvenir";
+            A[4]="gallery";
+            A[5]="translation";
+            A[6]="atmosphere";
+            A[7]="hesitation";
+            A[8]="cooperation";
+            A[9]="dynasty";
+            A[10]="milestone";
+            A[11]="longitude";
+            A[12]="transportation";
+            A[13]="commodity";
+            A[14]="emphasis";
+            A[15]="orphanage";
+            A[16]="interaction";
+            A[17]="frangrance";
+            A[18]="proposal";
+            var curAns = "background";
+            var B = new Array(19);
+            var count = 0;
+            var i=1;
+            var correct=0;
+            function checkAns(){
+                var check = document.getElementById("check");
+                var next = document.getElementById("next");
+                check.style.visibility="hidden";
+                var ans = document.getElementById("ans");
+                var msg = document.getElementById("msg");
+                if(ans.value.toLowerCase()==curAns){
+                    msg.innerHTML="正確";
+                    correct++;
+                }
+                else{
+                    msg.innerHTML="答錯，答案是:"+curAns;
+                }
+                next.style.visibility="visible";
+            }
+            function nextQuiz(){
+                var check = document.getElementById("check");
+                var next = document.getElementById("next");
+                next.style.visibility="hidden";
+                check.style.visibility="visible";
+                var index = Math.floor(Math.random()*Q.length);
+                B[count] = Q.splice(index,1);
+                var q = document.getElementById("q").innerHTML="Q"+(++i)+". "+B[count];
+                count++;
+                curAns = A.splice(index,1);
+                var ans = document.getElementById("ans").value="";
+                var msg = document.getElementById("msg").innerHTML="<br>";
+                if(count==20){
+                    check.style.visibility="hidden";
+                    var end = document.getElementById("all");
+                    end.style.visibility="hidden";
+                    alert("已完成測驗，您答對"+correct+"題");
+                    var back = document.getElementById("back");
+                    back.style.visibility="visible";
+                }
+            }
+        </script>
+        <style>
+            body{
+                font-size: 22px;
+                text-align:center;
+                margin-top: 150px;
+                background-color:#FEEFC7;
+            }
+        </style>   
+    </head>
+        
+    <body>
+        <div id="all">
+            <h2 style="margin-top:30px; color:red"><b>每一題僅限作答一次。</b></h2>
+            <p><h2>請回答出下列名詞的英文單詞</h2></p>           
+            <br>
+            <a href="home.html"><button class="btn btn-warning" id="back" style="visibility:hidden">返回大廳</button></a>
+            <br>
+            <b><h2><div id="q">Q1. 背景(b開頭)</div></h2></b>
+            <br>
+            <input id="ans" type="text" size="50">
+            <br>
+            <br>
+            <div id="msg"><br></div>
+            <br>
+            <button id="check" class="btn btn-success" onclick="checkAns()">確認</button>
+            <button id="next"  class="btn btn-info" onclick="nextQuiz()" style="visibility:hidden">下一題</button>
+            <br>
+            <br>
+            <br>
+            
+        </div>            
+    </body>
+    </html>

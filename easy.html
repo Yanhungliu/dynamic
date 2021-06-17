@@ -1,0 +1,411 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            var A = new Array(20);
+            A[0] = "choice1";
+            A[1] = "choice2";
+            A[2] = "choice3";
+            A[3] = "choice4";
+            A[4] = "choice5";
+            A[5] = "choice6";
+            A[6] = "choice7";
+            A[7] = "choice8";
+            A[8] = "choice9";
+            A[9] = "choice10";
+            A[10] = "choice11";
+            A[11] = "choice12";
+            A[12] = "choice13";
+            A[13] = "choice14";
+            A[14] = "choice15";
+            A[15] = "choice16";
+            A[16] = "choice17";
+            A[17] = "choice18";
+            A[18] = "choice19";
+            A[19] = "choice20";
+            var m = new Array(20);
+            m[0] = "msg1";
+            m[1] = "msg2";
+            m[2] = "msg3";
+            m[3] = "msg4";
+            m[4] = "msg5";
+            m[5] = "msg6";
+            m[6] = "msg7";
+            m[7] = "msg8";
+            m[8] = "msg9";
+            m[9] = "msg10";
+            m[10] = "msg11";
+            m[11] = "msg12";
+            m[12] = "msg13";
+            m[13] = "msg14";
+            m[14] = "msg15";
+            m[15] = "msg16";
+            m[16] = "msg17";
+            m[17] = "msg18";
+            m[18] = "msg19";
+            m[19] = "msg20";
+            var c = new Array(20);
+            c[0]="c1";
+            c[1]="c2";
+            c[2]="c3";
+            c[3]="c4";
+            c[4]="c5";
+            c[5]="c6";
+            c[6]="c7";
+            c[7]="c8";
+            c[8]="c9";
+            c[9]="c10";
+            c[10]="c11";
+            c[11]="c12";
+            c[12]="c13";
+            c[13]="c14";
+            c[14]="c15";
+            c[15]="c16";
+            c[16]="c17";
+            c[17]="c18";
+            c[18]="c19";
+            c[19]="c20";
+            var index=0;
+            var correct =0;
+            function checkAns(){
+            var msg = document.getElementById(m[index]);
+            var che = document.getElementById(c[index]);
+                if(document.getElementById(A[index]).checked){
+                    msg.innerHTML="correct";
+                    correct++;
+                }
+                else{
+                    msg.innerHTML="false";
+                }
+                che.style.visibility="hidden";
+                if( che.style.visibility="hidden")
+                index++;
+            }
+            function score(){
+                alert("已完成測驗，您答對"+correct+"題");
+                var back = document.getElementById("back");
+                back.style.visibility="visible";
+            }
+        </script>
+        <style>
+            body{
+                font-size: 22px;              
+                background-color:#FEEFC7;
+            }
+            h3{
+                background-color:lightblue;
+                padding-left:10px;
+                border-radius:20px;
+            }
+            hr{
+                border: 1px solid;
+            }
+        </style>  
+    </head>
+
+    <body>
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+        <div id="all">
+            <h2 style="padding-top:30px; color:red"><b>每一題僅限作答一次，且不可跳題作答。</b></h2>
+            <br>
+
+            <h2><p>Q1. masterpiece</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="choice1">傑作</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="">大師</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">通勤</p></h3>
+            <br>
+            <div id="msg1"><br></div>
+            <button id="c1" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q2. authority</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="">鄰居</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="">任務</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="choice2">權威</p></h3>
+            <br>
+            <div id="msg2"><br></div>
+            <button id="c2" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q3. persuasive</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="">有意識的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="choice3">有說服力的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">多產的</p></h3>
+            <br>
+            <div id="msg3"><br></div>
+            <button id="c3" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q4. industrial</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="">服務業的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="">農業的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="choice4">工業的</p></h3>
+            <br>
+            <div id="msg4"><br></div>
+            <button id="c4" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q5. conference</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="choice5">會議</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="">信心</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">熟思</p></h3>
+            <br>
+            <div id="msg5"><br></div>
+            <button id="c5" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q6. circumstance</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="">氛圍</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="choice6">環境</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">職業</p></h3>
+            <br>
+            <div id="msg6"><br></div>
+            <button id="c6" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q7. intense</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="choice7">強烈的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="">刺激的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">興奮的</p></h3>
+            <br>
+            <div id="msg7"><br></div>
+            <button id="c7" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q8. customs</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="">服裝</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="">習性</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="choice8">海關</p></h3>
+            <br>
+            <div id="msg8"></div><br></div>
+            <button id="c8" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q9. exposure</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="">誇大</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="choice9">暴露</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">現象</p></h3>
+            <br>
+            <div id="msg9"><br></div>
+            <button id="c9" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q10. abortion</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="choice10">中止</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="">打擾</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">組合</p></h3>
+            <br>
+            <div id="msg10"><br></div>
+            <button id="c10" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q11. rural</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="">都市的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="choice11">鄉下的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">郊區的</p></h3>
+            <br>
+            <div id="msg11"><br></div>
+            <button id="c11" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q12. loyal</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="">高貴的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="">皇家的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="choice12">忠實的</p></h3>
+            <br>
+            <div id="msg12"><br></div>
+            <button id="c12" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q13. academic</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="">精神上的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="choice13">學術的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">放棄</p></h3>
+            <br>
+            <div id="msg13"><br></div>
+            <button id="c13" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q14. isolated</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="choice14">孤立的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="">普遍的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">支配的</p></h3>
+            <br>
+            <div id="msg14"><br></div>
+            <button id="c14" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q15. permanent</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="">有孕的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="choice15">永恆的</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">方便的</p></h3>
+            <br>
+            <div id="msg15"><br></div>
+            <button id="c15" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q16. pass away</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="">傳承</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="">調查</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="choice16">過世</p></h3>
+            <br>
+            <div id="msg16"><br></div>
+            <button id="c16" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q17. lay off</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="choice17">解雇</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="">躺平</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">透漏</p></h3>
+            <br>
+            <div id="msg17"><br></div>
+            <button id="c17" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q18. show off</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="">降落</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="choice18">炫耀</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">隔絕</p></h3>
+            <br>
+            <div id="msg18"><br></div>
+            <button id="c18" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q19. stand up for</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="choice19">支持</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="">傑出</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">熬夜</p></h3>
+            <br>
+            <div id="msg19"><br></div>
+            <button id="c19" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+
+            <h2><p>Q20. take in</p></h2>
+            <hr>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="1" id="">握住</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="2" id="choice20">欣賞</p></h3>
+            <br>
+            <h3><p> <input type="radio" name="choice" value="3" id="">雇用</p></h3>
+            <br>
+            <div id="msg20"><br></div>
+            <button id="c20" class="btn btn-success" onclick="checkAns()">確認</button>
+            <br>
+            <br>
+            <button class="btn btn-info"  onclick="score()">確認結果</button>
+            <a href="home.html"><button class="btn btn-warning" id="back" style="visibility:hidden">返回大廳</button></a>
+        </div>
+        <div class="col-sm-2">
+        </div>
+        </div>
+        </div>
+              
+        <br>
+        <br>
+
+        </body>
+</html>
